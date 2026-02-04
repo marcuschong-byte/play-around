@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Will You Be My Valentine?</title>
+
+<style>
+/* ---------- PAGE ---------- */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #fbcad3;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.15) 0,
+    rgba(255,255,255,0.15) 10px,
+    rgba(255,255,255,0) 10px,
+    rgba(255,255,255,0) 20px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+/* flower emoji background */
+body::before {
+  content: " 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸";
+  position: fixed;
+  inset: 0;
+  font-size: 40px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: white;
+  width: 360px;
+  padding: 30px 20px;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+h1 {
+  color: #ff4f9a;
+  margin-bottom: 15px;
+}
+
+/* ---------- BUTTONS ---------- */
+.buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  padding: 10px 22px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background: #ff5fa2;
+  color: white;
+}
+
+#noBtn {
+  background: #aaa;
+  color: white;
+  position: relative;
+}
+
+/* ---------- IMAGES ---------- */
+img {
+  width: 180px;
+  height: auto;
+  border-radius: 15px;
+}
+
+#result {
+  display: none;
+}
+
+/* ---------- RAIN ---------- */
+.rain {
+  position: fixed;
+  top: -40px;
+  font-size: 30px;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Will you be my Valentine?😁🌹</h1>
+
+  <div class="buttons">
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <!-- Donkey -->
+  <img id="donkey" src="images/donkey.gif" alt="Donkey">
+
+  <!-- Result -->
+  <div id="result">
+    <h2>YESSSSSSS!!!😍😍😍</h2>
+    <img src="images/roderick.webp" alt="Roderick">
+  </div>
+</div>
+
+<script>
+/* ---------- NO BUTTON RUN AWAY ---------- */
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseenter", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+  noBtn.style.position = "fixed";
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+
+/* ---------- YES CLICK ---------- */
+document.getElementById("yesBtn").onclick = () => {
+  document.getElementById("donkey").style.display = "none";
+  document.getElementById("result").style.display = "block";
+  startRain("💖", "☁️", "🌺", "❤️");
+};
+
+/* ---------- EMOJI RAIN ---------- */
+function startRain(...emojis) {
+  setInterval(() => {
+    const drop = document.createElement("div");
+    drop.className = "rain";
+    drop.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+    drop.style.left = Math.random() * window.innerWidth + "px";
+    drop.style.animationDuration = 2 + Math.random() * 3 + "s";
+    document.body.appendChild(drop);
+
+    setTimeout(() => drop.remove(), 6000);
+  }, 150);
+}
+</script>
+
+</body>
+</html>
